@@ -10,7 +10,7 @@ if [ -e /etc/centos-release ]; then
   # install and configure anyenv
   git clone https://github.com/riywo/anyenv ~/.anyenv
   
-  cat <<-"EOF" >> ~/.bash_profile
+  cat <<-"EOF" | ~/.bash_profile ~/.bashrc
 		# setting anyenv
 		if [ -d $HOME/.anyenv ]; then 
 		  export PATH="$HOME/.anyenv/bin:$PATH" 
