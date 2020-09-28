@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "init configure"
+
 # install tools
 if [ -e /etc/centos-release ]; then
   sudo yum install -y vim
