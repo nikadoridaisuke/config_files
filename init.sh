@@ -8,14 +8,13 @@ if [ -e /etc/centos-release ]; then
   # install and configure anyenv
   git clone https://github.com/riywo/anyenv ~/.anyenv
   
-  cat <<-"EOF" >> sample.txt
+  cat <<-"EOF" >> ~/.bash_profile
 		# setting anyenv
-		if [ -d $HOME/.anyenv ] then 
+		if [ -d $HOME/.anyenv ]; then 
 		  export PATH="$HOME/.anyenv/bin:$PATH" 
-		  eval $(anyenv init -)" 
+		  eval "$(anyenv init -)" 
 		fi
 	EOF
-  >> sample.txt
   
 	# install vim-plug 
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
